@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Idle_ArrowDown.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Idle_ArrowUp.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Tutorial.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Idle_ArrowRight.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Idle_ArrowLeft.tscn" type="PackedScene" id=7]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Create" type="Node2D" parent="."]
+
+[node name="Position2D_AL" type="Position2D" parent="Create"]
+position = Vector2( 322, 514 )
+
+[node name="Position2D_AD" type="Position2D" parent="Create"]
+position = Vector2( 450, 514 )
+
+[node name="Position2D_AU" type="Position2D" parent="Create"]
+position = Vector2( 578, 514 )
+
+[node name="Position2D_AR" type="Position2D" parent="Create"]
+position = Vector2( 706, 514 )
+
+[node name="Idle_ArrowLeft" parent="." instance=ExtResource( 7 )]
+light_mask = 2
+position = Vector2( 320, 88 )
+
+[node name="Idle_ArrowDown" parent="." instance=ExtResource( 1 )]
+position = Vector2( 448, 88 )
+
+[node name="Idle_ArrowUp" parent="." instance=ExtResource( 2 )]
+position = Vector2( 576, 88 )
+
+[node name="Idle_ArrowRight" parent="." instance=ExtResource( 4 )]
+position = Vector2( 700, 88 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="area_shape_entered" from="Idle_ArrowDown" to="Idle_ArrowDown" method="_on_Idle_ArrowDown_area_shape_entered"]
+[connection signal="area_shape_exited" from="Idle_ArrowDown" to="Idle_ArrowDown" method="_on_Idle_ArrowDown_area_shape_exited"]

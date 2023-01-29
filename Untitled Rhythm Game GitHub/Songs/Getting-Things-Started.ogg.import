@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Getting-Things-Started.ogg-0f3b3499008c84de64991f171efe0cbc.oggstr"
+
+[deps]
+
+source_file="res://Songs/Getting-Things-Started.ogg"
+dest_files=[ "res://.import/Getting-Things-Started.ogg-0f3b3499008c84de64991f171efe0cbc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

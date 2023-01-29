@@ -1,0 +1,285 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/MenuTitle.gd" type="Script" id=1]
+[ext_resource path="res://Songs/Gravii-Beyond-Menu.wav" type="AudioStream" id=2]
+[ext_resource path="res://Sounds/RhythmDodge-SelectSound.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/RhythmDodge-BackSound.wav" type="AudioStream" id=4]
+
+[sub_resource type="Animation" id=5]
+resource_name = "CameraOptions"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 512, 300 ), Vector2( -512, 300 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "OptionsStartUp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../OptionsButton:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1100, 350 ), Vector2( 700, 350 ), Vector2( 600, 350 ), Vector2( 700, 350 ), Vector2( 750, 350 ), Vector2( 700, 350 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "PlayStartUp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../PlayButton:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 250 ), Vector2( 800, 250 ), Vector2( 700, 250 ), Vector2( 800, 250 ), Vector2( 850, 250 ), Vector2( 800, 250 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "QuitStartUp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../QuitButton:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1100, 450 ), Vector2( 792, 450 ), Vector2( 692, 450 ), Vector2( 792, 450 ), Vector2( 842, 450 ), Vector2( 792, 450 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 500, -100 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../PlayButton:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1100, 250 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../StartPrompt:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 172, 530 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Camera2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 512, 300 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../OptionsButton:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1100, 350 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../QuitButton:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1100, 450 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "StartPromptStarted"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../StartPrompt:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 172, 530 ), Vector2( 172, 500 ), Vector2( 172, 630 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "TitleStartUp"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 500, -100 ), Vector2( 100, 100 ), Vector2( 80, 110 ), Vector2( 100, 100 ) ]
+}
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="MenuTitle" type="Label" parent="."]
+margin_left = 500.0
+margin_top = -100.0
+margin_right = 630.0
+margin_bottom = -86.0
+rect_scale = Vector2( 6, 6 )
+text = "Rhythm Dodge"
+
+[node name="BackOptionsButton" type="Button" parent="."]
+margin_left = -1000.0
+margin_top = 25.0
+margin_right = -958.0
+margin_bottom = 45.0
+rect_scale = Vector2( 4, 4 )
+focus_mode = 0
+text = "Back"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../MenuTitle")
+anims/CameraOptions = SubResource( 5 )
+anims/OptionsStartUp = SubResource( 6 )
+anims/PlayStartUp = SubResource( 1 )
+anims/QuitStartUp = SubResource( 7 )
+anims/RESET = SubResource( 2 )
+anims/StartPromptStarted = SubResource( 4 )
+anims/TitleStartUp = SubResource( 3 )
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 1100.0
+margin_top = 250.0
+margin_right = 1138.0
+margin_bottom = 270.0
+rect_scale = Vector2( 4, 4 )
+focus_mode = 0
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="."]
+margin_left = 1100.0
+margin_top = 450.0
+margin_right = 1140.0
+margin_bottom = 470.0
+rect_scale = Vector2( 4, 4 )
+focus_mode = 0
+text = "Quit"
+
+[node name="OptionsButton" type="Button" parent="."]
+margin_left = 1100.0
+margin_top = 350.0
+margin_right = 1163.0
+margin_bottom = 370.0
+rect_scale = Vector2( 4, 4 )
+focus_mode = 0
+text = "Options"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+current = true
+
+[node name="Options" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -1122.0
+margin_top = 1.0
+margin_right = -1020.0
+margin_bottom = 29.0
+rect_scale = Vector2( 2, 2 )
+text = "Options"
+align = 1
+valign = 1
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Sounds" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="SelectSound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource( 3 )
+volume_db = 10.0
+
+[node name="BackSound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource( 4 )
+volume_db = 10.0
+
+[node name="StartPrompt" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -340.0
+margin_top = -70.0
+margin_right = -204.0
+margin_bottom = -56.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 0, 5 )
+text = "Press Space to begin!"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="BackOptionsButton" to="." method="_on_BackOptionsButton_pressed"]
+[connection signal="pressed" from="BackOptionsButton" to="MenuTitle" method="_on_BackOptionsButton_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="OptionsButton" to="MenuTitle" method="_on_OptionsButton_pressed"]
